@@ -897,8 +897,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
+    background: rgba(30, 58, 138, 0.6); /* Deep blue with opacity */
+    backdrop-filter: blur(8px);
     z-index: 2000;
     display: flex;
     justify-content: center;
@@ -914,14 +914,14 @@ body {
 }
 
 .popup-content {
-    background: rgba(30, 58, 138, 0.9); /* Dark blue glass */
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism */
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--white);
-    padding: 30px;
-    border-radius: 15px;
+    padding: 40px;
+    border-radius: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 450px;
     position: relative;
     transform: translateY(-20px);
     transition: all 0.3s ease;
@@ -936,7 +936,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
     transition: var(--transition);
@@ -947,7 +947,7 @@ body {
 }
 
 .popup-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--white);
     margin-bottom: 10px;
     text-align: center;
@@ -960,10 +960,20 @@ body {
     text-align: center;
 }
 
+.popup-content .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .popup-content .input-group input {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white);
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
 }
 
 .popup-content .input-group input::placeholder {
@@ -971,10 +981,34 @@ body {
 }
 
 .popup-content .input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
 }
 
 .popup-content .input-group input:focus {
+    outline: none;
     border-color: var(--secondary-color);
     background: rgba(255, 255, 255, 0.2);
+}
+
+.popup-content .btn-submit {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.popup-content .btn-submit:hover {
+    background-color: var(--secondary-hover);
 }
