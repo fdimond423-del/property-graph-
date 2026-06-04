@@ -102,4 +102,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
+
+    // Auto Popup Form Logic
+    const popup = document.getElementById('autoPopup');
+    const closePopup = document.getElementById('closePopup');
+    const popupForm = document.getElementById('popupForm');
+
+    function showPopup() {
+        if (popup && !popup.classList.contains('active')) {
+            popup.classList.add('active');
+        }
+    }
+
+    if (closePopup && popup) {
+        closePopup.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+    }
+
+    // Close when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('active');
+        }
+    });
+
+    if(popupForm) {
+        popupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = popupForm.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Submitting...';
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Done!';
+                btn.style.backgroundColor = '#25D366';
+                setTimeout(() => {
+                    popup.classList.remove('active');
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '';
+                    popupForm.reset();
+                }, 1500);
+            }, 1000);
+        });
+    }
+
+    // Show popup every 7 seconds
+    setInterval(showPopup, 7000);
 });
