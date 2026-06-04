@@ -77,36 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Form Submission Handling
-    const leadForm = document.getElementById('leadForm');
-    if(leadForm) {
-        leadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = leadForm.querySelector('.btn-submit');
-            const originalText = btn.innerHTML;
-            
-            // Simple visual feedback
-            btn.innerHTML = 'Sending...';
-            btn.style.opacity = '0.8';
-            
-            setTimeout(() => {
-                btn.innerHTML = '<i class="bx bx-check"></i> Request Sent!';
-                btn.style.backgroundColor = '#25D366';
-                btn.style.opacity = '1';
-                leadForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.backgroundColor = '';
-                }, 3000);
-            }, 1500);
-        });
-    }
-
+    // Form Submission Handling has been removed to allow standard FormSubmit action
+    
     // Auto Popup Form Logic
     const popup = document.getElementById('autoPopup');
     const closePopup = document.getElementById('closePopup');
-    const popupForm = document.getElementById('popupForm');
 
     function showPopup() {
         if (popup && !popup.classList.contains('active')) {
@@ -126,26 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.classList.remove('active');
         }
     });
-
-    if(popupForm) {
-        popupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = popupForm.querySelector('.btn-submit');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Submitting...';
-            
-            setTimeout(() => {
-                btn.innerHTML = 'Done!';
-                btn.style.backgroundColor = '#25D366';
-                setTimeout(() => {
-                    popup.classList.remove('active');
-                    btn.innerHTML = originalText;
-                    btn.style.backgroundColor = '';
-                    popupForm.reset();
-                }, 1500);
-            }, 1000);
-        });
-    }
 
     // Show popup every 7 seconds
     setInterval(showPopup, 7000);

@@ -914,7 +914,10 @@ body {
 }
 
 .popup-content {
-    background: var(--white);
+    background: rgba(30, 58, 138, 0.9); /* Dark blue glass */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
     padding: 30px;
     border-radius: 15px;
     width: 90%;
@@ -922,7 +925,7 @@ body {
     position: relative;
     transform: translateY(-20px);
     transition: all 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 .popup-overlay.active .popup-content {
@@ -935,39 +938,43 @@ body {
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.7);
     transition: var(--transition);
 }
 
 .popup-close:hover {
-    color: var(--secondary-color);
+    color: var(--white);
 }
 
 .popup-content h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.8rem;
+    color: var(--white);
     margin-bottom: 10px;
     text-align: center;
 }
 
 .popup-content p {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
 .popup-content .input-group input {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    color: var(--text-dark);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.popup-content .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .popup-content .input-group i {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .popup-content .input-group input:focus {
     border-color: var(--secondary-color);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.2);
 }
