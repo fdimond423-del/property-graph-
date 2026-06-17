@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
+    const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-down, .slide-in-left, .slide-in-right');
     animatedElements.forEach(el => {
         observer.observe(el);
     });
