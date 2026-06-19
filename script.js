@@ -102,6 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Show popup every 10 seconds
-    setInterval(showPopup, 10000);
+    // Show popup timer disabled
+    // setInterval(showPopup, 10000);
 });
