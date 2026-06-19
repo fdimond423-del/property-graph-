@@ -102,9 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Show popup immediately on load
-    showPopup();
-
-    // Show popup every 10 seconds
+    // Show popup every 10 seconds (first trigger after 10s delay)
     setInterval(showPopup, 10000);
 });
