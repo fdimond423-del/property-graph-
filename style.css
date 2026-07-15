@@ -511,6 +511,49 @@ body {
     z-index: 2;
 }
 
+.download-badge-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-badge-overlay:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
+}
+
+.project-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 10px;
+}
+
+.project-actions .btn {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .project-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-info {
     padding: 25px;
 }
