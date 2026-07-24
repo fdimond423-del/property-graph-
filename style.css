@@ -1,8 +1,8 @@
 :root {
     --primary-color: #1E3A8A; /* Deep Blue */
     --primary-light: #3B82F6;
-    --secondary-color: #F59E0B; /* Amber/Gold */
-    --secondary-hover: #D97706;
+    --secondary-color: #D4AF37; /* Classic Metallic Gold */
+    --secondary-hover: #B8860B; /* Darker Gold */
     --text-dark: #1F2937;
     --text-light: #6B7280;
     --bg-light: #F9FAFB;
@@ -104,7 +104,7 @@ body {
 .btn-primary {
     background-color: var(--secondary-color);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-primary:hover {
@@ -276,7 +276,7 @@ body {
 .badge {
     display: inline-block;
     padding: 6px 15px;
-    background: rgba(245, 158, 11, 0.2);
+    background: rgba(212, 175, 55, 0.2);
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
     border-radius: 20px;
@@ -534,7 +534,7 @@ body {
 .download-badge-overlay:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
 }
 
 .project-actions {
@@ -599,7 +599,7 @@ body {
 .amenity-item:hover {
     transform: translateY(-5px);
     border-color: var(--secondary-color);
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
 }
 
 .amenity-item .icon-box {
