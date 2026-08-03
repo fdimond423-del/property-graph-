@@ -102,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Show popup every 20 seconds (first trigger after 20s delay)
-    setInterval(showPopup, 20000);
+    // Show popup ONCE when opening website (after 3 seconds)
+    setTimeout(showPopup, 3000);
 });
+
+
