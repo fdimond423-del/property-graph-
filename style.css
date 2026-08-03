@@ -992,13 +992,13 @@ body {
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 
-/* Responsive Media Queries */
+/* Responsive Media Queries - Mobile Optimization */
 @media (max-width: 992px) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     .hero-buttons {
@@ -1012,11 +1012,17 @@ body {
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 40px;
     }
 
     .experience-badge {
-        right: 50%;
-        transform: translateX(50%);
+        position: relative;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        margin: 20px auto 0;
+        width: 130px;
+        height: 130px;
     }
 
     .features-list li {
@@ -1032,11 +1038,17 @@ body {
     }
 
     .header {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(7, 21, 43, 0.98);
+        border-bottom: 1px solid rgba(16, 185, 129, 0.3);
     }
     
     .menu-icon {
         display: block;
+        color: #FFFFFF;
     }
     
     .logo img {
@@ -1045,10 +1057,12 @@ body {
     
     .logo span {
         font-size: 1.1rem;
+        color: #FFFFFF;
     }
 
     .glass-form {
-        padding: 25px;
+        padding: 25px 20px;
+        max-width: 100%;
     }
 
     .navbar {
@@ -1056,12 +1070,18 @@ body {
         top: 100%;
         left: -100%;
         width: 100%;
-        background: var(--white);
+        background: #07152B;
+        border-bottom: 1px solid rgba(16, 185, 129, 0.3);
         flex-direction: column;
-        padding: 30px 20px;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        transition: 0.3s;
-        gap: 20px;
+        padding: 25px 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        transition: 0.35s ease;
+        gap: 18px;
+    }
+
+    .navbar a:not(.btn) {
+        color: #FFFFFF !important;
+        font-size: 1.1rem;
     }
 
     .navbar.active {
@@ -1069,11 +1089,35 @@ body {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.25;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .projects-grid, .amenities-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-actions .btn {
+        width: 100%;
     }
 
     .footer-grid {
@@ -1095,11 +1139,16 @@ body {
     }
 
     body {
-        padding-bottom: 60px; /* Space for sticky CTA */
+        padding-bottom: 65px;
     }
 
     .sticky-cta {
         display: flex;
+        z-index: 10000;
+        background: #07152B;
+        border-top: 1px solid rgba(16, 185, 129, 0.3);
+        padding: 8px 12px;
+        gap: 8px;
     }
 }
 
@@ -1107,35 +1156,25 @@ body {
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
     }
     
     .hero-buttons .btn {
         width: 100%;
     }
 
-    .projects-grid, .amenities-grid {
-        grid-template-columns: 1fr;
+    .download-badge-overlay {
+        padding: 4px 10px;
+        font-size: 0.75rem;
     }
 
-    .experience-badge {
-        width: 110px;
-        height: 110px;
-        padding: 10px;
-        bottom: -10px;
-        right: 10px;
-        border-width: 5px;
-    }
-    
-    .experience-badge h2 {
-        font-size: 1.8rem;
+    .status-badge {
+        padding: 4px 10px;
+        font-size: 0.75rem;
     }
 
-    .experience-badge p {
-        font-size: 0.8rem;
-    }
-
-    .section {
-        padding: 50px 0;
+    .container {
+        padding: 0 15px;
     }
 }
 
