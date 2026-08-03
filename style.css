@@ -120,7 +120,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: #FFFFFF;
 }
 
 .section-title span {
@@ -131,7 +131,7 @@ body {
 }
 
 .section-header p {
-    color: var(--text-light);
+    color: #CBD5E1;
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 40px;
@@ -156,7 +156,7 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, #059669 0%, #10B981 100%);
-    color: var(--white);
+    color: #FFFFFF;
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
 }
 
@@ -182,14 +182,15 @@ body {
 }
 
 .btn-outline {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    color: #FFFFFF;
     background: transparent;
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    border-color: #10B981;
+    color: #FFFFFF;
 }
 
 .btn-whatsapp {
