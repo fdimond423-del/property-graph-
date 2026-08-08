@@ -6,6 +6,7 @@ echo.
 echo If a popup/browser page opens, please sign in to authenticate.
 echo.
 git push origin main
+git push origin main:gh-pages
 echo.
 echo ===================================================
 echo Done! Please check https://fdimond423-del.github.io/property-graph-/
