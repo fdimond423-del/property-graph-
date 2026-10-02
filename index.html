@@ -12,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Property Graph - Premium Residential & Farmhouse Plots in Nagpur & Jabalpur. Download brochures & master plans.">
     <title>Property Graph | Premium Real Estate & Plots | Download Brochures</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="preload" as="image" href="hero-bg.webp" type="image/webp">
+    <link rel="preload" as="image" href="logo.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,7 +32,7 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="logo.png" alt="Property Graph Logo" style="height: 60px;">
+                <img src="logo.webp" alt="Property Graph Logo" style="height: 60px;" width="165" height="55" fetchpriority="high">
                 <span>Property Graph<br><small>Real Estate</small></span>
             </a>
             <nav class="navbar">
@@ -67,9 +69,11 @@
                 <div class="glass-form">
                     <h3>Get Pricing & Details</h3>
                     <p>Register now for exclusive layout maps and free site visits.</p>
-                    <form id="leadForm" action="https://formsubmit.co/akashgupta16511@gmail.com" method="POST">
+                    <form id="leadForm" action="https://formsubmit.co/akashgupta16511@gmail.com" target="hidden_iframe" onsubmit="window.submitted=true;" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://fdimond423-del.github.io/property-graph-/thankyou.html">
+                        <input type="hidden" name="_next" value="thankyou.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Website Lead - Property Graph">
                         <div class="input-group">
                             <i class='bx bx-user'></i>
                             <input type="text" name="name" placeholder="Your Name" required>
@@ -134,7 +138,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image slide-in-left">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Real Estate" loading="lazy">
+                    <img src="about-img.webp" alt="Premium Real Estate" loading="lazy" decoding="async" width="800" height="533">
                     <div class="experience-badge">
                         <h2>10+</h2>
                         <p>Years of Trust</p>
@@ -160,7 +164,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image slide-in-left">
-                    <img src="founder/12x18....-1%20copy.jpg.jpeg" alt="Akash Gupta - Founder & Visionary" loading="lazy">
+                    <img src="founder/12x18....-1%20copy.jpg.webp" alt="Akash Gupta - Founder & Visionary" loading="lazy" decoding="async" width="600" height="750">
                 </div>
                 <div class="about-text slide-in-right">
                     <h2 class="section-title">The Vision Behind <span>Property Graph</span></h2>
@@ -186,12 +190,12 @@
                     <div class="project-img">
                         <div class="project-carousel-6">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><img src="green_valley_group/image1.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="green_valley_group/image2.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="green_valley_group/image3.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="green_valley_group/image4.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="green_valley_group/image5.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="green_valley_group/image6.jpeg" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image1.webp" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image2.webp" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image3.webp" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image4.webp" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image5.webp" alt="Green Valley Resorts" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="green_valley_group/image6.webp" alt="Green Valley Resorts" loading="lazy"></div>
                             </div>
                         </div>
                         <span class="status-badge">Fast Selling</span>
@@ -227,11 +231,11 @@
                     <div class="project-img">
                         <div class="project-carousel">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.02.05-1-768x577.jpeg" alt="Balaji New Town Wardha Road" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.02.06-768x577%202.jpeg" alt="Balaji New Town Wardha Road" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.03.56-2-768x576%20(1).jpeg" alt="Balaji New Town Wardha Road" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/drone-shots-2.jpg.jpeg" alt="Balaji New Town Wardha Road" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/drone-shots-3.jpg.jpeg" alt="Balaji New Town Wardha Road" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.02.05-1-768x577.webp" alt="Balaji New Town Wardha Road" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.02.06-768x577%202.webp" alt="Balaji New Town Wardha Road" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/WhatsApp-Image-2024-11-11-at-19.03.56-2-768x576%20(1).webp" alt="Balaji New Town Wardha Road" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/drone-shots-2.jpg.webp" alt="Balaji New Town Wardha Road" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="ba;aji%20new%20town%20wardha%20road%20crowsol/drone-shots-3.jpg.webp" alt="Balaji New Town Wardha Road" loading="lazy"></div>
                             </div>
                         </div>
                         <span class="status-badge">₹1300 / Sq.Ft.</span>
@@ -265,7 +269,7 @@
                 <!-- Project 3 -->
                 <div class="project-card zoom-in">
                     <div class="project-img">
-                        <img src="balaj%20jungle%20resort/balaji_jungle_resort_plot.png" alt="Balaji Jungle Resort Dhamna Farmland Plot" loading="lazy">
+                        <img src="balaj%20jungle%20resort/balaji_jungle_resort_plot.webp" alt="Balaji Jungle Resort Dhamna Farmland Plot" loading="lazy">
                         <span class="status-badge">₹400 / Sq.Ft.</span>
                         <a href="balaj%20jungle%20resort/Balaji%20jungle%20resort%20brosure.docx" download="Balaji Jungle Resort Brochure.docx" class="download-badge-overlay" title="Download Brochure">
                             <i class='bx bx-download'></i> Download Brochure
@@ -299,11 +303,11 @@
                     <div class="project-img">
                         <div class="project-carousel">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><img src="balaji%20river/Front_view_2K_202605291612.jpg.jpeg" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_completely_new_FRONT_202605291632.jpg.jpeg" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_luxury_arrival_perspective._202605291714.jpg.jpeg" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_premium_aerial_architectural_202605291713.jpg.jpeg" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20river/Change_the_text_from_Divine_202605291605.jpg.jpeg" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20river/Front_view_2K_202605291612.jpg.webp" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_completely_new_FRONT_202605291632.jpg.webp" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_luxury_arrival_perspective._202605291714.jpg.webp" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20river/Generate_a_premium_aerial_architectural_202605291713.jpg.webp" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20river/Change_the_text_from_Divine_202605291605.jpg.webp" alt="Balaji River Farmhouse Plot" loading="lazy"></div>
                             </div>
                         </div>
                         <span class="status-badge">New Launch</span>
@@ -339,8 +343,8 @@
                     <div class="project-img">
                         <div class="project-carousel-2">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><img src="balaji%20divine/IMG_6451.png" alt="Balaji Divine Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20divine/IMG_6452.png" alt="Balaji Divine Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20divine/IMG_6451.webp" alt="Balaji Divine Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20divine/IMG_6452.webp" alt="Balaji Divine Farmhouse Plot" loading="lazy"></div>
                             </div>
                         </div>
                         <span class="status-badge">New Launch</span>
@@ -376,9 +380,9 @@
                     <div class="project-img">
                         <div class="project-carousel-3">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.08%20PM.jpeg" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.09%20PM%20(1).jpeg" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
-                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.09%20PM.jpeg" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.08%20PM.webp" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.09%20PM%20(1).webp" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="balaji%20estata/WhatsApp%20Image%202026-06-17%20at%204.12.09%20PM.webp" alt="Balaji Estate Farmhouse Plot" loading="lazy"></div>
                             </div>
                         </div>
                         <span class="status-badge">New Launch</span>
@@ -425,7 +429,7 @@
             <div class="video-grid">
                 <!-- Video 1 -->
                 <div class="video-card zoom-in">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -435,7 +439,7 @@
                 </div>
                 <!-- Video 2 -->
                 <div class="video-card zoom-in delay-1">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -445,7 +449,7 @@
                 </div>
                 <!-- Video 3 -->
                 <div class="video-card zoom-in delay-2">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -455,7 +459,7 @@
                 </div>
                 <!-- Video 4 -->
                 <div class="video-card zoom-in delay-3">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -465,7 +469,7 @@
                 </div>
                 <!-- Video 5 -->
                 <div class="video-card zoom-in">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video5.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -475,7 +479,7 @@
                 </div>
                 <!-- Video 6 -->
                 <div class="video-card zoom-in delay-1">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video6.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -485,7 +489,7 @@
                 </div>
                 <!-- Video 7 -->
                 <div class="video-card zoom-in delay-2">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video7.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -495,7 +499,7 @@
                 </div>
                 <!-- Video 8 -->
                 <div class="video-card zoom-in delay-3">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video8.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -505,7 +509,7 @@
                 </div>
                 <!-- Video 9 -->
                 <div class="video-card zoom-in">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video9.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -515,7 +519,7 @@
                 </div>
                 <!-- Video 10 -->
                 <div class="video-card zoom-in delay-1">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video10.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -525,7 +529,7 @@
                 </div>
                 <!-- Video 11 -->
                 <div class="video-card zoom-in delay-2">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video11.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -535,7 +539,7 @@
                 </div>
                 <!-- Video 12 -->
                 <div class="video-card zoom-in delay-3">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video12.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -545,7 +549,7 @@
                 </div>
                 <!-- Video 13 -->
                 <div class="video-card zoom-in">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video13.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -555,7 +559,7 @@
                 </div>
                 <!-- Video 14 -->
                 <div class="video-card zoom-in delay-1">
-                    <video controls preload="metadata">
+                    <video controls preload="none" playsinline>
                         <source src="project-videos/video14.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -671,7 +675,7 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <a href="#" class="logo footer-logo">
-                        <img src="logo.png" alt="Property Graph Logo" style="height: 60px; margin-right: 10px;">
+                        <img src="logo.webp" alt="Property Graph Logo" style="height: 60px; margin-right: 10px;" width="165" height="55" loading="lazy">
                         <span style="font-size: 1.5rem; color: #fff;">Property Graph</span>
                     </a>
                     <p>Your trusted partner in building a secure future through premium real estate investments in Nagpur & Jabalpur.</p>
@@ -708,11 +712,11 @@
         <div class="popup-content">
             <span class="popup-close" id="closePopup">&times;</span>
             <div style="text-align: center; margin-bottom: 15px;">
-                <img src="logo.png" alt="Property Graph Logo" style="height: 60px;">
+                <img src="logo.webp" alt="Property Graph Logo" style="height: 60px;" width="165" height="55" loading="lazy">
             </div>
             <h3>Enquire Now</h3>
             <p>Get exclusive details & site visit dates for our premium projects!</p>
-            <form id="popupForm" action="https://formsubmit.co/akashgupta16511@gmail.com" method="POST">
+            <form id="popupForm" action="https://formsubmit.co/akashgupta16511@gmail.com" target="hidden_iframe" onsubmit="window.submitted=true;" method="POST">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://fdimond423-del.github.io/property-graph-/thankyou.html">
                 <div class="input-group">
@@ -732,7 +736,10 @@
         </div>
     </div>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted){window.location='thankyou.html';}"></iframe>
 </body>
 </html>
+
+
 

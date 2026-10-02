@@ -8,22 +8,499 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WT37V9CK');</script>
     <!-- End Google Tag Manager -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Property Graph</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Thank You | Property Graph - Akash Gupta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #07152B;
+            --primary-light: #0F233D;
+            --accent-emerald: #10B981;
+            --accent-green: #25D366;
+            --accent-green-hover: #1ebd5b;
+            --text-white: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-glow: rgba(16, 185, 129, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #050E1D 0%, #07152B 50%, #0B1E38 100%);
+            color: var(--text-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Circles */
+        .ambient-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(37, 211, 102, 0.05) 50%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-top { top: -100px; right: -100px; }
+        .glow-bottom { bottom: -100px; left: -100px; }
+
+        .thankyou-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 680px;
+            width: 100%;
+            background: rgba(15, 35, 61, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glow);
+            border-radius: 28px;
+            padding: 45px 35px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.1);
+            text-align: center;
+            animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .brand-logo {
+            height: 55px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        }
+
+        /* Checkmark Animation */
+        .success-icon-wrap {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: rgba(37, 211, 102, 0.12);
+            border: 2px solid var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.35);
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(37, 211, 102, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(37, 211, 102, 0.6); transform: scale(1.04); }
+        }
+
+        .success-icon-wrap i {
+            font-size: 52px;
+            color: var(--accent-green);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        h1 span {
+            color: var(--accent-emerald);
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #CBD5E1;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Lead Summary Pill */
+        .lead-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: #E2E8F0;
+            margin-bottom: 25px;
+        }
+
+        .lead-pill i {
+            color: var(--accent-emerald);
+        }
+
+        /* WhatsApp Card / Highlight Box */
+        .whatsapp-cta-box {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%);
+            border: 1px solid rgba(37, 211, 102, 0.35);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .whatsapp-cta-box p {
+            font-size: 0.98rem;
+            color: #E2E8F0;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .btn-whatsapp-chat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 16px 28px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-whatsapp-chat:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #22bf5b 0%, #0e776b 100%);
+        }
+
+        .btn-whatsapp-chat i {
+            font-size: 1.8rem;
+        }
+
+        .btn-whatsapp-chat small {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Auto-redirect countdown bar */
+        .redirect-notice {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .redirect-notice a {
+            color: var(--accent-green);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Secondary Actions (Call & Home) */
+        .action-row {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-call:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-emerald);
+            transform: translateY(-2px);
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #CBD5E1;
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Brochure Downloads Box */
+        .brochure-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            text-align: left;
+        }
+
+        .brochure-section h3 {
+            font-size: 1.05rem;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brochure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 580px) {
+            .brochure-grid {
+                grid-template-columns: 1fr;
+            }
+            .thankyou-wrapper {
+                padding: 35px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .btn-whatsapp-chat {
+                font-size: 1.1rem;
+                padding: 14px 20px;
+            }
+        }
+
+        .brochure-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 10px 14px;
+            text-decoration: none;
+            color: #E2E8F0;
+            font-size: 0.88rem;
+            transition: all 0.25s ease;
+        }
+
+        .brochure-item:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--accent-emerald);
+            color: #FFFFFF;
+            transform: translateX(3px);
+        }
+
+        .brochure-item i {
+            font-size: 18px;
+            color: var(--accent-emerald);
+        }
+
+        /* Footer note */
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT37V9CK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-light); text-align: center; flex-direction: column; padding: 20px;">
-        <i class='bx bxs-check-circle' style="font-size: 100px; color: #25D366; margin-bottom: 20px;"></i>
-        <h1 style="color: var(--primary-color); margin-bottom: 15px; font-size: 2.5rem;">Thank You for Reaching Out!</h1>
-        <p style="color: var(--text-light); max-width: 500px; margin-bottom: 40px; font-size: 1.1rem; line-height: 1.6;">Your enquiry has been successfully submitted. Our team will review your details and get back to you shortly with exclusive offers and project details.</p>
-        <a href="index.html" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Back to Home</a>
-    </div>
+
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+
+    <main class="thankyou-wrapper">
+        <a href="index.html" title="Property Graph Home">
+            <img src="logo.webp" alt="Property Graph Logo" class="brand-logo" width="165" height="55">
+        </a>
+
+        <!-- Animated Success Checkmark -->
+        <div class="success-icon-wrap">
+            <i class='bx bx-check'></i>
+        </div>
+
+        <h1>Thank You, <span id="lead-name">Valued Client</span>!</h1>
+        <p class="subtitle">
+            Your details have been successfully received and sent to <strong>Akash Gupta</strong>. Our team will review your enquiry and contact you promptly.
+        </p>
+
+        <!-- Dynamic Lead Summary Tag -->
+        <div class="lead-pill" id="lead-pill" style="display: none;">
+            <i class='bx bxs-user-check'></i>
+            <span>Enquiry registered for <strong id="lead-contact-text">+91 7415506461</strong></span>
+        </div>
+
+        <!-- WhatsApp Instant Chat Box -->
+        <div class="whatsapp-cta-box">
+            <p>
+                <i class='bx bxs-zap' style="color: #FBBF24;"></i> Want instant brochures, rates & layout maps directly on WhatsApp?
+            </p>
+            <a href="https://wa.me/917415506461?text=Hello%20Akash%20ji,%20I%20have%20submitted%20my%20enquiry%20on%20Property%20Graph.%20Please%20share%20the%20project%20brochures%20and%20rates." id="whatsapp-btn" class="btn-whatsapp-chat" target="_blank">
+                <i class='bx bxl-whatsapp'></i>
+                <div>
+                    <div>Chat with Akash Gupta on WhatsApp</div>
+                    <small>Instant reply • Exclusive plots • Free Site Visit</small>
+                </div>
+            </a>
+            
+            <div class="redirect-notice" id="redirect-bar">
+                <i class='bx bx-time-five'></i>
+                <span>Redirecting to Home in <strong id="countdown-sec">4</strong>s...</span>
+                <span>•</span>
+                <a id="cancel-redirect">Cancel</a>
+            </div>
+        </div>
+
+        <!-- Call & Back Home Actions -->
+        <div class="action-row">
+            <a href="tel:+917415506461" class="btn-call">
+                <i class='bx bxs-phone-call'></i> Call +91 7415506461
+            </a>
+            <a href="index.html" class="btn-home">
+                <i class='bx bx-home-alt'></i> Back to Home
+            </a>
+        </div>
+
+        <!-- Instant Brochure Downloads -->
+        <div class="brochure-section">
+            <h3><i class='bx bxs-file-pdf' style="color: #EF4444;"></i> Instant Brochure Downloads:</h3>
+            <div class="brochure-grid">
+                <a href="green%20vally%20brosure%20final/Green%20Valley%20Broucher.pdf.pdf" download="Green Valley Brochure.pdf" class="brochure-item">
+                    <span>Green Valley Resorts</span>
+                    <i class='bx bx-download'></i>
+                </a>
+                <a href="ba;aji%20new%20town%20wardha%20road%20crowsol/GV%20New%20Map%202%20(1).pdf" download="Balaji New Town Map.pdf" class="brochure-item">
+                    <span>Balaji New Town Map</span>
+                    <i class='bx bx-download'></i>
+                </a>
+                <a href="balaji%20divine/Balaji%20Divine%20City%20-%20Copy.pdf" download="Balaji Divine City Brochure.pdf" class="brochure-item">
+                    <span>Balaji Divine City</span>
+                    <i class='bx bx-download'></i>
+                </a>
+                <a href="index.html#projects" class="brochure-item">
+                    <span>View All 6 Projects</span>
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Property Graph • Centre Plaza, Napier Town, Jabalpur • +91 7415506461
+        </div>
+    </main>
+
+    <script>
+        // Extract Lead details from URL parameters or sessionStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const leadName = urlParams.get('name') || sessionStorage.getItem('pg_lead_name') || '';
+        const leadPhone = urlParams.get('phone') || sessionStorage.getItem('pg_lead_phone') || '';
+        const leadPurpose = urlParams.get('purpose') || sessionStorage.getItem('pg_lead_purpose') || '';
+
+        // Personalize the greeting
+        if (leadName && leadName.trim() !== '') {
+            document.getElementById('lead-name').textContent = leadName.trim();
+        }
+
+        // Show lead pill if phone available
+        if (leadPhone && leadPhone.trim() !== '') {
+            const leadPill = document.getElementById('lead-pill');
+            const contactText = document.getElementById('lead-contact-text');
+            contactText.textContent = leadPhone.trim();
+            leadPill.style.display = 'inline-flex';
+        }
+
+        // Build customized WhatsApp link
+        let waMessage = "Hello Akash ji, ";
+        if (leadName && leadName.trim() !== '') {
+            waMessage += "my name is " + leadName.trim();
+            if (leadPhone && leadPhone.trim() !== '') {
+                waMessage += " (" + leadPhone.trim() + ")";
+            }
+            waMessage += ". ";
+        }
+        waMessage += "I just submitted an enquiry on Property Graph";
+        if (leadPurpose && leadPurpose.trim() !== '') {
+            waMessage += " regarding '" + leadPurpose.trim() + "'";
+        }
+        waMessage += ". Please share the project brochures, pricing and layout details.";
+
+        const waUrl = "https://wa.me/917415506461?text=" + encodeURIComponent(waMessage);
+        const waBtn = document.getElementById('whatsapp-btn');
+        waBtn.href = waUrl;
+
+        // Auto-redirect countdown (4 seconds)
+        let countdown = 4;
+        const countdownEl = document.getElementById('countdown-sec');
+        const redirectBar = document.getElementById('redirect-bar');
+        const cancelBtn = document.getElementById('cancel-redirect');
+        let autoRedirectTimer = null;
+
+        autoRedirectTimer = setInterval(() => {
+            countdown--;
+            if (countdownEl) countdownEl.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(autoRedirectTimer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                clearInterval(autoRedirectTimer);
+                if (redirectBar) {
+                    redirectBar.innerHTML = "<span style='color: var(--text-muted);'>Auto-redirect paused. Click above to chat anytime!</span>";
+                }
+            });
+        }
+    </script>
 </body>
 </html>

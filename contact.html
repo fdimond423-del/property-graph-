@@ -36,7 +36,7 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="Property Graph Logo" style="height: 60px;">
+                <img src="logo.webp" alt="Property Graph Logo" style="height: 60px;" width="165" height="55">
                 <span>Property Graph<br><small style="color: #CBD5E1;">Real Estate</small></span>
             </a>
             <nav class="navbar">
@@ -90,9 +90,11 @@
                 
                 <div style="background: rgba(7, 21, 43, 0.6); padding: 30px; border-radius: 18px; border: 1px solid rgba(16, 185, 129, 0.2);">
                     <h3 style="margin-bottom: 20px; color: #FFFFFF; font-size: 1.5rem;">Send an Enquiry</h3>
-                    <form action="https://formsubmit.co/akashgupta16511@gmail.com" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/akashgupta16511@gmail.com" target="hidden_iframe" onsubmit="window.submitted=true;" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://fdimond423-del.github.io/property-graph-/thankyou.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Contact Enquiry - Property Graph">
+                        <input type="hidden" name="_next" value="thankyou.html">
                         
                         <input type="text" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: white; font-size: 1rem;">
                         <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: white; font-size: 1rem;">
@@ -105,5 +107,9 @@
             </div>
         </div>
     </div>
+    <script src="script.js?v=6"></script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted){window.location='thankyou.html';}"></iframe>
 </body>
 </html>
+
+
