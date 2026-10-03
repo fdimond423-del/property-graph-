@@ -1607,3 +1607,9 @@ img[src*="logo.webp"], img[src*="logo.png"] {
     width: auto !important;
     object-fit: contain;
 }
+
+/* Fix text color for popup form inputs */
+.popup-content .input-group input,
+.popup-content .input-group input:focus {
+    color: #000000 !important;
+}

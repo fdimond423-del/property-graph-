@@ -174,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Show popup ONCE when opening website (after 3.5 seconds)
-    setTimeout(showPopup, 3500);
+    // Show popup REPEATEDLY every 20 seconds
+    setInterval(showPopup, 20000);
 });
+
 
