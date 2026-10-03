@@ -1601,3 +1601,9 @@ body {
     }
 }
 
+
+/* Global Logo Aspect Ratio Fix */
+img[src*="logo.webp"], img[src*="logo.png"] {
+    width: auto !important;
+    object-fit: contain;
+}
